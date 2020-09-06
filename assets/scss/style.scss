@@ -1,0 +1,12 @@
+@import '../../node_modules/bulma/sass/utilities/_all';
+
+$menu-item-active-background-color: red;
+
+$section-padding: 5rem 3.5rem;
+
+html,
+body {
+  height: 100%;
+}
+
+@import '../../node_modules/bulma/bulma.sass';
