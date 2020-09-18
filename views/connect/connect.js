@@ -16,30 +16,30 @@ let getData = async () => {
   connectData.map(el => {
     connect.innerHTML +=
       `
-            <div class="card">
-                <div class="card-content">
-                    <article class="post">
-                    <div class="media">
-                        <div class="media-left">
-                        <p class="title is-4">` +
-      el.title +
-      `</p>
-                        <p class="subtitle is-6">Written by user: ` +
-      el.userId +
-      `											<span class="tag is-danger">Comment</span>
-      </p>
-                        </div>
-                    </div>
-                    <div class="content">
-                        ` +
-      el.body +
-      `
-                    </div>
-                    </article>
+      <div class="card">
+        <div class="card-content">
+          <article class="post">
+            <div class="media">
+                <div class="media-left">
+                  <p class="title is-4">` +
+                  el.title +
+                  `</p>
+                  <p class="subtitle is-6">Written by user: ` +
+                    el.userId +
+                  `<span class="tag is-danger">Comment</span>
+                  </p>
                 </div>
             </div>
-            <br>
-            `;
+            <div class="content">
+              ` +
+              el.body +
+              `
+            </div>
+          </article>
+        </div>
+      </div>
+      <br>
+      `;
   });
 };
 
