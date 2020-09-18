@@ -1,98 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        * {
-          font-family: 'Public Sans';
-        }
+      * {
+        font-family: 'Public Sans';
+      }
     </style>
     <div class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-            <a href="#" class="is-size-3 is-family-secondary navbar-item">🚀freya</a>
-  
-            <a
-              role="button"
-              class="navbar-burger burger"
-              aria-label="menu"
-              aria-expanded="false"
-              data-target="navbarBasicExample"
-            >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a href="#" class="is-size-3 is-family-secondary navbar-item">🚀freya</a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="" class="navbar-item"> Dashboard </a>
+
+            <a href="" class="navbar-item"> Profile </a>
+
+            <a href="" class="navbar-item"> Notifications </a>
+
+            <a href="" class="navbar-item"> Help </a>
           </div>
-  
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a href="" class="navbar-item"> Dashboard </a>
-  
-              <a href="" class="navbar-item"> Profile </a>
-  
-              <a href="" class="navbar-item"> Notifications </a>
-  
-              <a href="" class="navbar-item"> Help </a>
-            </div>
-  
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="buttons">
-                  <a href="index.html" class="button is-danger"> Log Out </a>
-                </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="index.html" class="button is-danger"> Log Out </a>
               </div>
             </div>
           </div>
-        </nav>
-        <br />
-        <div class="container">
-          <div class="columns">
-            <div class="column is-one-fifth">
-              <aside class="menu">
-                <p class="menu-label is-size-6">
-                  <strong>Alumni</strong>
-                </p>
-                <ul class="menu-list">
-                  <li @click="sAttendanceX"><a>Search</a></li>
-                  <!--<li @click="reportsX"><a>Reports</a></li>-->
-                  <li><a>Alumni Reports</a></li>
-                  <li><a>Achievements</a></li>
-                  <li><a href="">Academic Progress</a></li>
-                </ul>
-                <p class="menu-label is-size-6">
-                  <strong>Profile</strong>
-                </p>
-                <ul class="menu-list">
-                  <a href="profile/profile.html"><li @click="fAttendanceX">View Profile</li></a>
-                  <li><a href="">Edit Profile</a></li>
-                </ul>
-              </aside>
-            </div>
-            <div class="column search-content">
-              <section class="hero is-link welcome is-small">
-                <div class="hero-body">
-                  <div class="container">
-                    <h1 class="is-size-1 is-family-secondary">Alumni Connect.</h1>
-                    <h2 class="subtitle">A virtual dinner table to have discussions over!</h2>
-                  </div>
+        </div>
+      </nav>
+      <br />
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-fifth">
+            <aside class="menu">
+              <p class="menu-label is-size-6">
+                <strong>Alumni</strong>
+              </p>
+              <ul class="menu-list">
+                <li @click="sAttendanceX"><a>Search</a></li>
+                <!--<li @click="reportsX"><a>Reports</a></li>-->
+                <li><a>Alumni Reports</a></li>
+                <li><a>Achievements</a></li>
+                <li><a href="">Academic Progress</a></li>
+              </ul>
+              <p class="menu-label is-size-6">
+                <strong>Profile</strong>
+              </p>
+              <ul class="menu-list">
+                <a href="profile/profile.html"><li @click="fAttendanceX">View Profile</li></a>
+                <li><a href="">Edit Profile</a></li>
+              </ul>
+            </aside>
+          </div>
+          <div class="column search-content">
+            <section class="hero is-link welcome is-small">
+              <div class="hero-body">
+                <div class="container">
+                  <h1 class="is-size-1 is-family-secondary">Alumni Connect.</h1>
+                  <h2 class="subtitle">A virtual dinner table to have discussions over!</h2>
                 </div>
-              </section>
-              <br />
-              <section class="connect"></section>
+              </div>
+            </section>
+            <br />
+            <div class="columns">
+              <div class="column is-2">
+                <p class="menu-label">Tags</p>
+                <ul class="menu-list">
+                  <li><span class="tag is-primary is-medium">Question</span></li>
+                  <br />
+                  <li><span class="tag is-link is-medium">Guide</span></li>
+                  <br />
+                  <li><span class="tag is-danger is-medium">Comment</span></li>
+                  <br />
+                  <li><span class="tag is-success is-medium">Transfers</span></li>
+                  <br />
+                  <li><span class="tag is-warning is-medium">Balance</span></li>
+                  <br />
+                  <li><span class="tag is-medium">Question</span></li>
+                </ul>
+              </div>
+              <div class="column connect"></div>
             </div>
           </div>
         </div>
       </div>
-      <script src="connect.js"></script>
-</body>
+    </div>
+    <script src="connect.js"></script>
+  </body>
 </html>
