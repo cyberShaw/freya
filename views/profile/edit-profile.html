@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../../assets/css/style.css" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
       rel="stylesheet"
@@ -95,79 +94,81 @@
               </ul>
             </aside>
           </div>
-          <div class="column">
-            <section class="hero is-dark welcome is-small">
+          <div class="column search-content">
+            <section class="hero is-success welcome is-small">
               <div class="hero-body">
                 <div class="container">
-                  <h1 class="is-size-1 is-family-secondary">Profile.</h1>
-                  <h2 class="subtitle">View your awesome personal details.</h2>
+                  <h1 class="is-size-1 is-family-secondary">Edit Profile.</h1>
+                  <h2 class="subtitle">
+                    Edit your personal details (Only Name, Email and Gender can be changed)
+                  </h2>
                 </div>
               </div>
             </section>
             <br />
-            <div class="container">
-              <div class="tile is-ancestor">
-                <div class="tile is-vertical is-8">
-                  <div class="tile">
-                    <div class="tile is-parent is-vertical">
-                      <article class="tile is-child notification is-black">
-                        <p class="title">Name 🔰</p>
-                        <p class="subtitle has-text-weight-bold is-family-monospace">John Doe</p>
-                      </article>
-                      <article class="tile is-child notification is-warning">
-                        <p class="title">Alumni ID 🆔</p>
-                        <p class="subtitle has-text-weight-bold is-family-monospace">923</p>
-                      </article>
-                      <div class="tile is-child">
-                        <article class="tile is-child notification is-danger">
-                          <p class="title">Roll Number ⚠️</p>
-                          <p class="subtitle has-text-weight-bold is-family-monospace">
-                            CB.EN.U4CSE17451
-                          </p>
-                          <div class="content">
-                            <!-- Content -->
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                    <div class="tile is-parent is-vertical">
-                      <article class="tile is-child notification is-link">
-                        <p class="title">Registered <br />Email ID</p>
-                        <p class="subtitle has-text-weight-bold is-family-monospace">
-                          john.doe@gmail.com
-                        </p>
-                      </article>
-                      <article class="tile is-child notification is-info">
-                        <p class="title">Gender 📝</p>
-                        <p class="subtitle has-text-weight-bold is-family-monospace">Male</p>
-                        <div class="content">
-                          <!-- Content -->
+            <div class="columns">
+              <div class="column is-half">
+                <div class="media">
+                  <div class="media-content">
+                    <div class="content is-size-5 is-family-monospace">
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">💂 Name:</div>
+                        <div class="media-content">
+                          <input class="input is-small" type="text" placeholder="John Doe" />
                         </div>
-                      </article>
+                      </div>
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">📧 Registered Email:</div>
+                        <div class="media-content">
+                          <input
+                            class="input is-small"
+                            type="email"
+                            placeholder="john.doe@gmail.com"
+                          />
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">🏳️‍🌈 Gender:</div>
+                        <div class="media-content">
+                          <input class="input is-small" type="text" placeholder="Male" />
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">📍 Roll Number:</div>
+                        <div class="media-content">CB.EN.U4CSE17451</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="tile is-parent is-vertical">
-                  <article class="tile is-child notification is-primary">
-                    <div class="content">
-                      <p class="title">Year of Joining 🌍</p>
-                      <p class="subtitle">2016</p>
+              </div>
+              <div class="column is-half">
+                <div class="media">
+                  <div class="media-content">
+                    <div class="content is-size-5 is-family-monospace">
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">🆔 Alumni ID:</div>
+                        <div class="media-content">923</div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">🌍 Year of Joining:</div>
+                        <div class="media-content">2016</div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">🚖 Year of Leaving:</div>
+                        <div class="media-content">2020</div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left has-text-weight-bold">🌟 Campus:</div>
+                        <div class="media-content">Coimbatore</div>
+                      </div>
                     </div>
-                  </article>
-                  <article class="tile is-child notification is-dark">
-                    <div class="content">
-                      <p class="title">Year of Leaving 🚖</p>
-                      <p class="subtitle">2020</p>
-                    </div>
-                  </article>
-                  <article class="tile is-child notification is-light">
-                    <div class="content">
-                      <p class="title">Campus 🌟</p>
-                      <p class="subtitle">Coimbatore</p>
-                    </div>
-                  </article>
+                  </div>
                 </div>
               </div>
+            </div>
+            <br />
+            <div class="columns is-centered">
+              <button class="button is-medium is-danger is-rounded">Edit Profile ✔️</button>
             </div>
           </div>
         </div>
