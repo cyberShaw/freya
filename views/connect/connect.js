@@ -17,17 +17,17 @@ let getData = async() => {
             connect.innerHTML +=
             `
             <div class="card">
-              <div class="card-content">
-                  <div class="media">
-                      <div class="media-left">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
                         <p class="title is-4">`+el.title+`</p>
                         <p class="subtitle is-6">Written by user: `+el.userId+`</p>
-                        <div class="content">
-                            `+el.body+`
                         </div>
-                      </div>
-                  </div>
-              </div>
+                    </div>
+                    <div class="content">
+                        `+el.body+`
+                    </div>
+                </div>
             </div>
             <br>
             `;
