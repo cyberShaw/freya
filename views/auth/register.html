@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      * {
+        font-family: 'Public Sans';
+      }
+      .title {
+        /* font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', */
+        /* Roboto, 'Helvetica Neue', Arial, sans-serif; */
+        display: block;
+        font-weight: 300;
+        font-size: 100px;
+        color: #35495e;
+        letter-spacing: 1px;
+      }
+
+      .subtitle {
+        font-weight: 300;
+        font-size: 42px;
+        color: #526488;
+        word-spacing: 5px;
+        padding-bottom: 15px;
+      }
+
+      .links {
+        padding-top: 15px;
+      }
+      .redirect {
+        margin-bottom: 3rem;
+      }
+
+      .space {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+      }
+
+      .column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .columns {
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: calc(100% - 20vw);
+      }
+
+      .xspace {
+        padding-bottom: calc(0.65rem + 1vh);
+      }
+    </style>
+    <div class>
+      <div class="columns is-gapless">
+        <section class="hero is-dark is-hidden-mobile">
+          <div class="hero-body columns is-vcentered">
+            <div class="is-vcentered">
+              <h1 class="title has-text-centered">freya</h1>
+              <h2 class="subtitle has-text-centered">An Alumni Portal for Amritians</h2>
+            </div>
+          </div>
+        </section>
+
+        <div class="column is-two-thirds">
+          <div class="container">
+            <h2 class="title is-size-1 has-text-centered">Don't have an account? Register!</h2>
+            <form @submit.prevent="register" class="space">
+              <div class="notification is-danger missing-email">Please enter your email!</div>
+
+              <div class="field xspace">
+                <div class="control">
+                  <input
+                    class="input is-shadowless is-family-monospace is-info"
+                    name="email"
+                    placeholder="Your email ID, please 😄"
+                    type="email"
+                    v-model="email"
+                  />
+                </div>
+              </div>
+
+              <div class="notification is-danger missing-roll">Please enter your roll number!</div>
+
+              <div class="field xspace">
+                <div class="control">
+                  <input
+                    class="input is-shadowless is-family-monospace is-success"
+                    name="rollno"
+                    placeholder="Enter your roll number"
+                    type="text"
+                  />
+                </div>
+              </div>
+
+              <div class="notification is-danger missing-yearj">Please select your joining!</div>
+
+              <div class="field xspace">
+                <div class="control">
+                  <input
+                    class="input is-shadowless is-family-monospace is-link"
+                    name="year-join"
+                    placeholder="Year of Joining"
+                    type="text"
+                  />
+                </div>
+              </div>
+
+              <div class="notification is-danger missing-yearl">Please enter year of leaving!</div>
+
+              <div class="field xspace">
+                <div class="control">
+                  <input
+                    class="input is-shadowless is-family-monospace is-warning"
+                    name="year-leave"
+                    placeholder="Year of leaving"
+                    type="text"
+                  />
+                </div>
+              </div>
+
+              <div class="notification is-danger missing-campus">Please select your campus!</div>
+
+              <div class="field xspace">
+                <div class="control">
+                  <div class="select">
+                    <select name="campus" id="campus">
+                      <option>Select campus</option>
+                      <option>Coimbatore</option>
+                      <option>Amritapuri</option>
+                      <option>Bangalore</option>
+                      <option>Mysore</option>
+                      <option>Kochi</option>
+                      <option>Chennai</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="notification is-danger missing-degree">Please select your degree!</div>
+
+              <div class="field xspace">
+                <div class="control">
+                  <div class="select">
+                    <select name="degree" id="degree">
+                      <option>Select degree</option>
+                      <option>BTech</option>
+                      <option>BA</option>
+                      <option>IMA</option>
+                      <option>IMSc</option>
+                      <option>MTech</option>
+                      <option>MA</option>
+                      <option>MBA</option>
+                      <option>MCA</option>
+                      <option>MSW</option>
+                      <option>PGD</option>
+                      <option>MSc</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="notification is-danger missing-password">Please enter a password!</div>
+
+              <div class="field">
+                <div class="control xspace">
+                  <input
+                    class="input is-shadowless is-family-monospace is-danger"
+                    name="password"
+                    placeholder="Enter your password 🙈"
+                    type="password"
+                  />
+                </div>
+              </div>
+
+              <div class="control">
+                <button
+                  class="button is-rounded is-success is-medium is-fullwidth login"
+                  type="submit"
+                >
+                  Register Now! ✔️
+                </button>
+              </div>
+            </form>
+
+            <div class="has-text-centered redirect space">
+              <p>
+                Already have an account?
+                <a href="../index.html">Login!</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const validate = () => {
+        let email = document.querySelector('input[name="email"]');
+        let roll = document.querySelector('input[name="roll"]');
+        let yearj = document.querySelector('input[name="yearj"]');
+        let yearl = document.querySelector('input[name="yearl"]');
+        let campus = document.getElementById('campus');
+        let degree = document.getElementById('degree');
+        let pass = document.querySelector('input[name="password"]');
+
+        let missingEmail = document.querySelector('.missing');
+
+        const validateEmail = () => {
+          if (email.value.length == 0) {
+            missingEmailNotification.style.display = 'block';
+            wrongEmailNotification.style.display = 'none';
+            return false;
+          } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+            missingEmailNotification.style.display = 'none';
+            wrongEmailNotification.style.display = 'block';
+            return false;
+          } else {
+            missingEmailNotification.style.display = 'none';
+            wrongEmailNotification.style.display = 'none';
+            return true;
+          }
+        };
+      };
+    </script>
+  </body>
+</html>

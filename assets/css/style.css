@@ -207,10 +207,42 @@ body {
   height: 100%;
 }
 
-.hero-body {
-  height: 100% !important;
+.missing-email {
+  display: none;
 }
 
+.missing-roll {
+  display: none;
+}
+
+.missing-yearj {
+  display: none;
+}
+
+.missing-yearl {
+  display: none;
+}
+
+.missing-campus {
+  display: none;
+}
+
+.missing-degree {
+  display: none;
+}
+
+.missing-password {
+  display: none;
+}
+
+@font-face {
+  font-family: "Grafier Black";
+  src: url("../fonts/Grafier-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "Grafier Regular";
+  src: url("../fonts/Grafier-Regular.otf") format("opentype");
+}
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -4265,7 +4297,7 @@ button.dropdown-item.is-active {
   color: #363636;
 }
 .menu-list a.is-active {
-  background-color: red;
+  background-color: blue;
   color: #fff;
 }
 .menu-list li ul {
@@ -8950,7 +8982,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .is-family-secondary {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Grafier Black" !important;
 }
 
 .is-family-sans-serif {

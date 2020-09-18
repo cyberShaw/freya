@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      * {
+        font-family: 'Public Sans';
+      }
+      .title {
+        /* font-family: 'Public Sans'; */
+        display: block;
+        font-weight: 300;
+        font-size: 100px;
+        color: #35495e;
+        letter-spacing: 1px;
+      }
+
+      .subtitle {
+        font-weight: 300;
+        font-size: 42px;
+        color: #526488;
+        word-spacing: 5px;
+        padding-bottom: 15px;
+      }
+
+      .links {
+        padding-top: 15px;
+      }
+
+      .redirect {
+        margin-bottom: 3rem;
+      }
+
+      .space {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+      }
+
+      .column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .columns {
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: calc(100% - 20vw);
+      }
+
+      .xspace {
+        padding-bottom: calc(0.65rem + 1vh);
+      }
+
+      .missing-email {
+        display: none;
+      }
+
+      .wrong-email {
+        display: none;
+      }
+
+      .missing-password {
+        display: none;
+      }
+    </style>
+    <div class>
+      <div class="columns is-gapless is-vcentered">
+        <section class="hero is-dark is-hidden-mobile columns is-vcentered">
+          <div class="hero-body columns is-vcentered">
+            <div class="is-vcentered">
+              <h1 class="title has-text-centered">freya</h1>
+              <h2 class="subtitle has-text-centered">An Alumni Portal for Amritians</h2>
+            </div>
+          </div>
+        </section>
+
+        <div class="column is-two-thirds">
+          <div class="container">
+            <h2 class="title is-size-1 has-text-centered">Welcome to Freya!</h2>
+
+            <!-- <Notification :message="msg" v-if="msg" :type="notif" /> -->
+
+            <div class="notification is-danger missing-email">Enter the email id!</div>
+            <div class="notification is-danger wrong-email">
+              Enter the email id in the correct format! (johndoe@example.com)
+            </div>
+            <div class="space is-family-primary">
+              <div class="field xspace">
+                <div class="control">
+                  <input
+                    class="input is-info is-family-monospace"
+                    name="email"
+                    placeholder="Your email ID, please 😄"
+                    type="email"
+                    v-model="email"
+                  />
+                </div>
+              </div>
+              <div class="notification is-danger missing-password">Enter a password!</div>
+              <div class="field">
+                <div class="control">
+                  <input
+                    class="input is-danger is-family-monospace"
+                    name="password"
+                    placeholder="Enter your password 🙈"
+                    type="password"
+                    v-model="password"
+                  />
+                </div>
+              </div>
+
+              <div class="is-pulled-right xspace">
+                <nuxt-link to="/forgot-password">Forgot Password?</nuxt-link>
+              </div>
+              <div class="control">
+                <button
+                  class="button is-danger is-outlined is-rounded is-medium is-fullwidth login"
+                  onclick="validate()"
+                >
+                  Log In 🔐
+                </button>
+              </div>
+            </div>
+
+            <div class="has-text-centered redirect space">
+              <p>
+                Don't have an account?
+                <a href="auth/register.html">Register!</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const validate = () => {
+        let email = document.querySelector('input[name="email"]');
+        let password = document.querySelector('input[name="password"]');
+
+        let missingEmailNotification = document.querySelector('.missing-email');
+        let wrongEmailNotification = document.querySelector('.wrong-email');
+
+        let missingPasswordNotification = document.querySelector('.missing-password');
+
+        const validateEmail = () => {
+          if (email.value.length == 0) {
+            missingEmailNotification.style.display = 'block';
+            wrongEmailNotification.style.display = 'none';
+            return false;
+          } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+            missingEmailNotification.style.display = 'none';
+            wrongEmailNotification.style.display = 'block';
+            return false;
+          } else {
+            missingEmailNotification.style.display = 'none';
+            wrongEmailNotification.style.display = 'none';
+            return true;
+          }
+        };
+
+        const validatePassword = () => {
+          if (password.value.length == 0) {
+            missingPasswordNotification.style.display = 'block';
+            return false;
+          } else {
+            missingPasswordNotification.style.display = 'none';
+            return true;
+          }
+        };
+
+        let a = validateEmail();
+        let b = validatePassword();
+        if (a && b) {
+          window.location.href = 'dashboard.html';
+        }
+      };
+    </script>
+  </body>
+</html>

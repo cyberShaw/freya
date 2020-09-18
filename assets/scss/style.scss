@@ -1,6 +1,6 @@
 @import '../../node_modules/bulma/sass/utilities/_all';
 
-$menu-item-active-background-color: red;
+$menu-item-active-background-color: blue;
 
 $section-padding: 5rem 3.5rem;
 
@@ -8,5 +8,45 @@ html,
 body {
   height: 100%;
 }
+
+.missing-email {
+  display: none;
+}
+
+.missing-roll {
+  display: none;
+}
+
+.missing-yearj {
+  display: none;
+}
+
+.missing-yearl {
+  display: none;
+}
+
+.missing-campus {
+  display: none;
+}
+
+.missing-degree {
+  display: none;
+}
+
+.missing-password {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Grafier Black';
+  src: url('../fonts/Grafier-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Grafier Regular';
+  src: url('../fonts/Grafier-Regular.otf') format('opentype');
+}
+
+$family-secondary: 'Grafier Black';
 
 @import '../../node_modules/bulma/bulma.sass';
