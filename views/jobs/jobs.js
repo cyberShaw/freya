@@ -10,6 +10,7 @@ async function getData() {
     .then(jobListings => {
       console.log(jobListings);
       jobData = jobListings.data;
+      console.log(jobData);
     })
     .catch(error => {
       console.log(error);

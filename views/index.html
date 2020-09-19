@@ -4,188 +4,270 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
     <style>
       * {
         font-family: 'Public Sans';
       }
-      .title {
-        /* font-family: 'Public Sans'; */
-        display: block;
-        font-weight: 300;
-        font-size: 100px;
-        color: #35495e;
-        letter-spacing: 1px;
+
+      #features {
+        background-color: #83d4ff;
       }
 
-      .subtitle {
-        font-weight: 300;
-        font-size: 42px;
-        color: #526488;
-        word-spacing: 5px;
-        padding-bottom: 15px;
+      @media (max-width: 1024px) {
+        .reverse-row-order {
+          flex-direction: column-reverse;
+          display: flex;
+        }
+
+        .row-order {
+          flex-direction: column;
+          display: flex;
+        }
       }
 
-      .links {
-        padding-top: 15px;
+      .feature-img {
+        max-width: 60%;
+        /* margin: 0 auto; */
       }
 
-      .redirect {
-        margin-bottom: 3rem;
-      }
-
-      .space {
-        padding-top: 3rem;
-        padding-bottom: 2rem;
-      }
-
-      .column {
-        display: flex;
-        align-items: center;
+      .is-horizontal-centered {
         justify-content: center;
       }
 
-      .columns {
-        min-height: 100vh;
+      .is-vertical-centered {
+        align-items: center;
       }
 
-      .container {
-        max-width: calc(100% - 20vw);
+      .is-column {
+        flex-direction: column;
       }
 
-      .xspace {
-        padding-bottom: calc(0.65rem + 1vh);
+      .section .container,
+      .hero .hero-body,
+      .hero .hero-head {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
       }
 
-      .missing-email {
-        display: none;
+      /*
+Some aesthetic improvements
+*/
+      nav {
+        padding-top: 20px;
+        max-height: 50px;
       }
 
-      .wrong-email {
-        display: none;
+      .paragraph {
+        width: 600px;
+        line-height: 1.5em;
       }
 
-      .missing-password {
-        display: none;
+      /*
+Hero
+*/
+      .burger {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      @media (min-width: 1024px) {
+        .hero-body {
+          background-size: 30%;
+          background-position: 80% 50%;
+          background-repeat: no-repeat;
+        }
+        .hero-body p {
+          width: 600px;
+        }
+      }
+
+      .progress {
+        animation: loader 4s ease-out infinite;
+        background: #d4d4d4;
+        color: #fff;
+        padding: 3px;
+        width: 100%;
+        transform: scaleX(0);
+      }
+
+      .progress-bar {
+        border-radius: 60px;
+        overflow: hidden;
+        max-width: 480px;
+        width: 100%;
+      }
+
+      .progress-bar span {
+        display: block;
+      }
+
+      .bar {
+        background: rgba(0, 0, 0, 0.075);
       }
     </style>
-    <div class>
-      <div class="columns is-gapless is-vcentered">
-        <section class="hero is-dark is-hidden-mobile columns is-vcentered">
-          <div class="hero-body columns is-vcentered">
-            <div class="is-vcentered">
-              <h1 class="title has-text-centered">freya</h1>
-              <h2 class="subtitle has-text-centered">An Alumni Portal for Amritians</h2>
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a href="#" class="is-size-3 is-family-secondary navbar-item">🚀freya</a>
+
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="dashboard.html" class="navbar-item"> Dashboard </a>
+
+            <a href="profile/profile.html" class="navbar-item"> Profile </a>
+
+            <a href="" class="navbar-item"> Notifications </a>
+
+            <a href="" class="navbar-item"> Help </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="auth/login.html" class="button is-success"> Sign In </a>
+              </div>
             </div>
           </div>
-        </section>
-
-        <div class="column is-two-thirds">
-          <div class="container">
-            <h2 class="title is-size-1 has-text-centered">Welcome to Freya!</h2>
-
-            <!-- <Notification :message="msg" v-if="msg" :type="notif" /> -->
-
-            <div class="space is-family-primary">
-              <div class="notification is-danger missing-email">Enter the email id!</div>
-              <div class="notification is-danger wrong-email">
-                Enter the email id in the correct format! (johndoe@example.com)
-              </div>
-              <div class="field xspace">
-                <div class="control">
-                  <input
-                    class="input is-info is-family-monospace"
-                    name="email"
-                    placeholder="Your email ID, please 😄"
-                    type="email"
-                    v-model="email"
-                  />
-                </div>
-              </div>
-              <div class="notification is-danger missing-password">Enter a password!</div>
-              <div class="field">
-                <div class="control">
-                  <input
-                    class="input is-danger is-family-monospace"
-                    name="password"
-                    placeholder="Enter your password 🙈"
-                    type="password"
-                    v-model="password"
-                  />
-                </div>
-              </div>
-
-              <div class="is-pulled-right xspace">
-                <nuxt-link to="/forgot-password">Forgot Password?</nuxt-link>
-              </div>
-              <div class="control">
-                <button
-                  class="button is-danger is-outlined is-rounded is-medium is-fullwidth login"
-                  onclick="validate()"
-                >
-                  Log In 🔐
-                </button>
-              </div>
-            </div>
-
-            <div class="has-text-centered redirect space">
-              <p>
-                Don't have an account?
-                <a href="auth/register.html">Register!</a>
+        </div>
+      </nav>
+    </div>
+    <section id="hero" class="hero is-medium">
+      <div class="hero-head">
+        <Navbar />
+        <ProfileBadge />
+      </div>
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-flex is-column is-horizontal-centered is-vertical-centered">
+              <h1
+                class="has-text-weight-bold is-family-secondary has-text-green is-size-2 is-size-4-mobile"
+              >
+                Freya - An Alumni Portal
+              </h1>
+              <br />
+              <p class="is-size-5">
+                A feature-rich, performant alumni portal made for Amritians, by Amritians.
               </p>
+            </div>
+            <div class="column is-flex is-horizontal-centered is-vertical-centered lottie">
+              <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_dT1E1P.json"
+                background="transparent"
+                speed="1"
+                style="width: 300px; height: 300px"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <script>
-      const validate = () => {
-        let email = document.querySelector('input[name="email"]');
-        let password = document.querySelector('input[name="password"]');
+    </section>
 
-        let missingEmailNotification = document.querySelector('.missing-email');
-        let wrongEmailNotification = document.querySelector('.wrong-email');
+    <section id="features" class="section has-mustard-bg">
+      <div class="container">
+        <div
+          class="columns reverse-row-order has-text-centered is-flex is-horizontal-centered is-vertical-centered"
+        >
+          <div class="column">
+            <h3
+              class="is-size-4 is-size-5-mobile is-color-blue has-text-weight-bold is-family-secondary is-capitalized"
+            >
+              Jobs & Opportunities
+            </h3>
+            <p class="is-size-3 is-size-4-mobile is-color-primary has-text-weight-bold">
+              Opportunity does not knock twice.
+            </p>
+            <p class="is-size-5 is-size-6-mobile is-color-primary">
+              Discover the latest jobs and opportunities, curated for you by Amrita Alumni.
+            </p>
+          </div>
+          <div class="column svg-container">
+            <img src="../assets/svg/career.svg" alt />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div
+          class="columns row-order has-text-centered is-flex is-horizontal-centered is-vertical-centered"
+        >
+          <div class="column svg-container">
+            <img src="../assets/svg/dicsuss.svg" alt />
+          </div>
+          <div class="column">
+            <h3
+              class="is-size-4 is-size-5-mobile is-color-blue has-text-weight-bold is-family-secondary is-capitalized"
+            >
+              Message Boards
+            </h3>
+            <p class="is-size-3 is-size-4-mobile is-color-primary has-text-weight-bold">
+              Connect with alumni in the industry
+            </p>
+            <p class="is-size-5 is-size-6-mobile is-color-primary">
+              Ask questions, post networking opportunities, check out hackathons in a reddit-style
+              message board.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div
+          class="columns reverse-row-order has-text-centered is-flex is-horizontal-centered is-vertical-centered"
+        >
+          <div class="column">
+            <h3
+              class="is-size-4 is-size-5-mobile is-color-blue has-text-weight-bold is-family-secondary is-capitalized"
+            >
+              Instant Messenger
+            </h3>
+            <p class="is-size-3 is-size-4-mobile is-color-primary has-text-weight-bold">
+              Connect with the best, instantly.
+            </p>
+            <p class="is-size-5 is-size-6-mobile is-color-primary">
+              With a click of a button, connect and talk with alumni.
+            </p>
+          </div>
+          <div class="column svg-container">
+            <img src="../assets/svg/message.svg" alt />
+          </div>
+        </div>
+      </div>
+    </section>
 
-        let missingPasswordNotification = document.querySelector('.missing-password');
-
-        const validateEmail = () => {
-          if (email.value.length == 0) {
-            missingEmailNotification.style.display = 'block';
-            wrongEmailNotification.style.display = 'none';
-            return false;
-          } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
-            missingEmailNotification.style.display = 'none';
-            wrongEmailNotification.style.display = 'block';
-            return false;
-          } else {
-            missingEmailNotification.style.display = 'none';
-            wrongEmailNotification.style.display = 'none';
-            return true;
-          }
-        };
-
-        const validatePassword = () => {
-          if (password.value.length == 0) {
-            missingPasswordNotification.style.display = 'block';
-            return false;
-          } else {
-            missingPasswordNotification.style.display = 'none';
-            return true;
-          }
-        };
-
-        let a = validateEmail();
-        let b = validatePassword();
-        if (a && b) {
-          window.location.href = 'dashboard.html';
-        }
-      };
-    </script>
+    <section id="cta" class="section">
+      <div class="container">
+        <h3 class="is-size-3 has-text-centered has-text-weight-bold">Let's interact!</h3>
+        <br />
+        <div class="is-flex is-horizontal-centered">
+          <nuxt-link to="/auth/login">
+            <button class="button is-large is-success has-text-weight-semibold">Sign In 🔐</button>
+          </nuxt-link>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
