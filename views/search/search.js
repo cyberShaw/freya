@@ -21,7 +21,7 @@ let getData = async() => {
                     <div class="media">
                         <div class="media-left">
                             <p class="title is-4">`+el.name+`</p>
-                            <p class="subtitle is-6">@`+el.username+`</p>
+                            <p class="subtitle is-6"><a>@`+el.username+`</a></p>
                             <p>Email: <a href = "mailto: `+el.email+`">`+el.email+`</a></p>
                             <p>Phone: `+el.phone+`</p>
                             <p>Address: `
