@@ -19,16 +19,14 @@ let getData = async () => {
       <div class="card">
         <div class="card-content">
           <article class="post">
-            <div class="media">
-                <div class="media-left">
-                  <p class="title is-4">` +
-                  el.title +
-                  `</p>
-                  <p class="subtitle is-6">Written by user: ` +
-                    el.userId +
-                  `<span class="tag is-danger">Comment</span>
-                  </p>
-                </div>
+            <div class="content">
+              <p class="title is-4">` +
+              el.title +
+              `</p>
+              <p class="subtitle is-6">Written by user: ` +
+                el.userId +
+              ` <span class="tag is-danger">Comment</span>
+              </p>
             </div>
             <div class="content">
               ` +
