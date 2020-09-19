@@ -1,110 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <style>
-      * {
-        font-family: 'Public Sans';
-      }
-      .job-content {
-        display: none;
-      }
-      /* .job-content {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <style>
+    * {
+      font-family: 'Public Sans';
+    }
+
+    .job-content {
+      display: none;
+    }
+
+    /* .job-content {
         background-color: beige;
         border-radius: 20px;
       } */
-    </style>
-    <div class="container">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a href="#" class="is-size-3 is-family-secondary navbar-item">🚀freya</a>
+  </style>
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a href="#" class="is-size-3 is-family-secondary navbar-item">🚀freya</a>
 
-          <a
-            role="button"
-            class="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+          data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="" class="navbar-item"> Dashboard </a>
+
+          <a href="" class="navbar-item"> Profile </a>
+
+          <a href="" class="navbar-item"> Notifications </a>
+
+          <a href="" class="navbar-item"> Help </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a href="" class="navbar-item"> Dashboard </a>
-
-            <a href="" class="navbar-item"> Profile </a>
-
-            <a href="" class="navbar-item"> Notifications </a>
-
-            <a href="" class="navbar-item"> Help </a>
-          </div>
-
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a href="index.html" class="button is-danger"> Log Out </a>
-              </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="index.html" class="button is-danger"> Log Out </a>
             </div>
           </div>
         </div>
-      </nav>
-      <br />
-      <div class="container">
-        <div class="columns">
-          <div class="column is-one-fifth">
-            <aside class="menu">
-              <p class="menu-label is-size-6">
-                <strong>Alumni</strong>
-              </p>
-              <ul class="menu-list">
-                <a href="../connect/connect.html"><li>Alumni Connect</li></a>
-                <a href="../search/search.html"><li>Alumni Search</li></a>
-              </ul>
-              <p class="menu-label is-size-6">
-                <strong>Compete</strong>
-              </p>
-              <ul class="menu-list">
-                <a href="../contests/contests.html">
-                  <li>Contests</li>
-                </a>
-                <a href="../jobs/jobs.html">
-                  <li>Job Listings</li>
-                </a>
-              </ul>
-              <p class="menu-label is-size-6">
-                <strong>Interact</strong>
-              </p>
-              <ul class="menu-list">
-                <a href="../social/social.html">
-                  <li>Message Board</li>
-                </a>
-              </ul>
-              <p class="menu-label is-size-6">
-                <strong>Profile</strong>
-              </p>
-              <ul class="menu-list">
-                <a href="../profile/profile.html"><li>View Profile</li></a>
-                <a href="../profile/edit-profile.html"><li>Edit Profile</li></a>
-              </ul>
-            </aside>
-          </div>
-          <div class="column"></div>
+      </div>
+    </nav>
+    <br />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-fifth">
+          <aside class="menu">
+            <p class="menu-label is-size-6">
+              <strong>Alumni</strong>
+            </p>
+            <ul class="menu-list">
+              <a href="../connect/connect.html">
+                <li>Alumni Connect</li>
+              </a>
+              <a href="../search/search.html">
+                <li>Alumni Search</li>
+              </a>
+            </ul>
+            <p class="menu-label is-size-6">
+              <strong>Compete</strong>
+            </p>
+            <ul class="menu-list">
+              <a href="../contests/contests.html">
+                <li>Contests</li>
+              </a>
+              <a href="../jobs/jobs.html">
+                <li>Job Listings</li>
+              </a>
+            </ul>
+            <p class="menu-label is-size-6">
+              <strong>Interact</strong>
+            </p>
+            <ul class="menu-list">
+              <a href="../social/social.html">
+                <li>Message Board</li>
+              </a>
+            </ul>
+            <p class="menu-label is-size-6">
+              <strong>Profile</strong>
+            </p>
+            <ul class="menu-list">
+              <a href="../profile/profile.html">
+                <li>View Profile</li>
+              </a>
+              <a href="../profile/edit-profile.html">
+                <li>Edit Profile</li>
+              </a>
+            </ul>
+          </aside>
+        </div>
+        <div class="column">
+          <section class="articles">
+            <div class="column is-8 is-offset-2">
+              <div class="card article">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content has-text-centered">
+                      <p class="title article-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+                        tempore.</p>
+                      <div class="tags has-addons level-item">
+                        <span class="tag is-rounded is-info">@lorem</span>
+                        <span class="tag is-rounded">May 10, 2018</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content article-body">
+                    <p>Non arcu risus quis varius quam quisque. Dictum varius duis at consectetur lorem. Posuere
+                      sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. </p>
+                    <p>Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. In hac habitasse platea
+                      dictumst vestibulum rhoncus est pellentesque elit. Accumsan lacus vel facilisis volutpat. Non
+                      sodales neque sodales ut etiam.
+                      Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.</p>
+                    Voluptat ut farmacium tellus in metus vulputate. Feugiat in fermentum posuere urna nec. Pharetra
+                    convallis posuere morbi leo urna molestie.
+                    Accumsan lacus vel facilisis volutpat est velit egestas. Fermentum leo vel orci porta. Faucibus
+                    interdum posuere lorem ipsum.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card article">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-center">
+                      <img src="https://source.unsplash.com/random/300x400" class="author-image"
+                        alt="Placeholder image">
+                    </div>
+                    <div class="media-content has-text-centered">
+                      <p class="title article-title">Sapien eget mi proin sed 🔱</p>
+                      <p class="subtitle is-6 article-subtitle">
+                        <a href="#">@lorem</a> on February 17, 2018
+                      </p>
+                    </div>
+                  </div>
+                  <div class="content article-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Accumsan lacus vel facilisis volutpat est velit egestas. Sapien
+                      eget mi proin sed. Sit amet mattis vulputate enim.
+                    </p>
+                    <p>
+                      Commodo ullamcorper a lacus vestibulum sed arcu. Fermentum leo vel orci porta non. Proin fermentum
+                      leo vel orci porta non pulvinar. Imperdiet proin fermentum leo vel. Tortor posuere ac ut consequat
+                      semper viverra. Vestibulum lectus mauris ultrices eros.
+                    </p>
+                    <h3 class="has-text-centered">Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Cras
+                      tincidunt lobortis feugiat vivamus.</h3>
+                    <p>
+                      In eu mi bibendum neque egestas congue quisque egestas diam. Enim nec dui nunc mattis enim ut
+                      tellus. Ut morbi tincidunt augue interdum velit euismod in. At in tellus integer feugiat
+                      scelerisque varius morbi enim nunc. Vitae suscipit tellus mauris a diam.
+                      Arcu non sodales neque sodales ut etiam sit amet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- END ARTICLE -->
+              <!-- START PROMO BLOCK -->
+              <section class="hero is-info is-bold is-small promo-block">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 class="title">
+                      <i class="fa fa-bell-o"></i> Nemo enim ipsam voluptatem quia.</h1>
+                    <span class="tag is-black is-medium is-rounded">
+                      Natus error sit voluptatem
+                    </span>
+                  </div>
+                </div>
+              </section>
+
+              <div class="card article">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-center">
+                      <img src="https://source.unsplash.com/random/400x400" class="author-image"
+                        alt="Placeholder image">
+                    </div>
+                    <div class="media-content has-text-centered">
+                      <p class="title article-title">Cras tincidunt lobortis feugiat vivamus.</p>
+                      <p class="subtitle is-6 article-subtitle">
+                        <a href="#">@angela</a> on October 7, 2017
+                      </p>
+                    </div>
+                  </div>
+                  <div class="content article-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Accumsan lacus vel facilisis volutpat est velit egestas. Sapien
+                      eget mi proin sed. Sit amet mattis vulputate enim.
+                    </p>
+                    <p>
+                      Commodo ullamcorper a lacus vestibulum sed arcu. Fermentum leo vel orci porta non. Proin fermentum
+                      leo vel orci porta non pulvinar. Imperdiet proin fermentum leo vel. Tortor posuere ac ut consequat
+                      semper viverra. Vestibulum lectus mauris ultrices eros.
+                    </p>
+                    <h3 class="has-text-centered">“Everyone should be able to do one card trick, tell two jokes, and
+                      recite three poems, in case they are ever trapped in an elevator.”</h3>
+                    <p>
+                      In eu mi bibendum neque egestas congue quisque egestas diam. Enim nec dui nunc mattis enim ut
+                      tellus. Ut morbi tincidunt augue interdum velit euismod in. At in tellus integer feugiat
+                      scelerisque varius morbi enim nunc. Vitae suscipit tellus mauris a diam.
+                      Arcu non sodales neque sodales ut etiam sit amet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
         </div>
       </div>
     </div>
-    <!-- <script src="jobs.js"></script> -->
-  </body>
+  </div>
+  <!-- <script src="jobs.js"></script> -->
+</body>
+
 </html>
